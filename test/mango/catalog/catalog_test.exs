@@ -1,7 +1,16 @@
 defmodule Mango.Catalog.CatalogTest do
-  use ExUnit.Case
+  use Mango.DataCase # 使用DataCase 可以在测试阶段帮助我们进行数据库连接
+
   alias Mango.Catalog
   alias Mango.Catalog.Product
+  alias Mango.Repo
+
+
+  setup do
+    Repo.insert %Product{name: "Tomato", price: 50, is_seasonal: false, category: "vegetables"}
+    Repo.insert %Product{name: "Apple", price: 100, is_seasonal: true, category: "fruits"}
+    :ok
+  end
 
   test "list_product/0 returns all products" do
     [p1 = %Product{}, p2 = %Product{},] = Catalog.list_products

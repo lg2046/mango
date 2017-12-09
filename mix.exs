@@ -41,9 +41,12 @@ defmodule Mango.Mixfile do
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
-      {:hound, "~> 1.0", only: :test}
+      {:hound, "~> 1.0", only: :test},
+      {:timex, "~> 3.1"}
     ]
   end
+
+  #  datetime |> Timezone.convert("Asia/Shanghai") |> Timex.shift(hours: 3) |> Timex.format("%Y-%m-%d %H:%M:%S", :strftime)
 
   # Aliases are shortcuts or tasks specific to the current project.
   # For example, to create, migrate and run the seeds file at once:

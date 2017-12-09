@@ -1,28 +1,28 @@
-defmodule MangoWeb.Acceptance.HomepageTest do
-  use MangoWeb.ConnCase
-  use Hound.Helpers #导入hound helper
-
-  hound_session()  #启动hound worker
-
-  test "present of featured products" do
-    #GIVEN
-
-    #WHEN
-    navigate_to("/")
-
-    #THEN
-    page_title = find_element(:css, ".page-title")
-    |> visible_text()
-
-    assert page_title == "Seasonal Products"
-
-    product = find_element(:css, ".product")
-    product_name = find_within_element(product, :css, ".product-name") |> visible_text
-    product_price = find_within_element(product, :css, ".product-price") |> visible_text
-
-    assert product_name == "Apple"
-    assert product_price == "100"
-
-    refute page_source() =~ "Tomato"
-  end
-end
+#defmodule MangoWeb.Acceptance.HomepageTest do
+#  use MangoWeb.ConnCase
+#  use Hound.Helpers #导入hound helper
+#
+#  hound_session()  #启动hound worker
+#
+#  test "present of featured products" do
+#    #GIVEN
+#
+#    #WHEN
+#    navigate_to("/")
+#
+#    #THEN
+#    page_title = find_element(:css, ".page-title")
+#    |> visible_text()
+#
+#    assert page_title == "Seasonal Products"
+#
+#    product = find_element(:css, ".product")
+#    product_name = find_within_element(product, :css, ".product-name") |> visible_text
+#    product_price = find_within_element(product, :css, ".product-price") |> visible_text
+#
+#    assert product_name == "Apple"
+#    assert product_price == "100"
+#
+#    refute page_source() =~ "Tomato"
+#  end
+#end
