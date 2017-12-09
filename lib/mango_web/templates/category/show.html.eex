@@ -1,0 +1,12 @@
+<div class="page-title"><%= @name %></div>
+
+<div>
+    <%= for product <- @products do %>
+    <div class="product">
+        <div class="product-name"><%= title_case product.name %></div>
+        <div>INR
+            <div class="product-price"><%= product.price %></div>
+        </div>
+    </div>
+    <% end %>
+</div>

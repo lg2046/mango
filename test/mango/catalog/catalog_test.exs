@@ -13,4 +13,12 @@ defmodule Mango.Catalog.CatalogTest do
     [product = %Product{}] = Catalog.list_seasonal_products
     assert product.name == "Apple"
   end
+
+  test "get_category_products/0 return products of the given category" do
+    [product = %Product{}] = Catalog.get_category_products("fruits")
+    assert product.name == "Apple"
+
+    [product = %Product{}] = Catalog.get_category_products("vegetables")
+    assert product.name == "Tomato"
+  end
 end
