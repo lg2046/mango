@@ -1,20 +1,20 @@
 <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#primary-nav">
-        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">
-        <img src="/images/logo.png"/> Mango </a>
-    </div>
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#primary-nav">
+                <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                <img src="/images/logo.png"/> Mango </a>
+        </div>
 
-    <div class="collapse navbar-collapse" id="primary-nav">
-      <ul class="nav navbar-nav">
-        <li><%= link "Fruits", to: category_path(@conn, :show, "fruits") %></li>
-        <li><%= link "Vegetables", to: category_path(@conn, :show, "vegetables") %></li>
-      </ul>
+        <div class="collapse navbar-collapse" id="primary-nav">
+            <ul class="nav navbar-nav">
+                <li><%= link "Fruits", to: category_path(@conn, :show, "fruits") %></li>
+                <li><%= link "Vegetables", to: category_path(@conn, :show, "vegetables") %></li>
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>

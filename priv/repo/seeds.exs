@@ -9,3 +9,25 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+alias Mango.Catalog.Product
+alias Mango.Repo
+alias NimbleCSV.RFC4180, as: CSV
+
+"priv/repo/seed_data/product_list.csv"
+|> File.read!
+|> CSV.parse_string
+|> Enum.each(
+     fn ([_, name, price, sku, is_seasonal, image, pack_size, category]) ->
+       is_seasonal = String.to_existing_atom(is_seasonal)
+       price = Decimal.new(price)
+       Repo.insert %Product{
+         name: name,
+         price: price,
+         is_seasonal: is_seasonal,
+         image: image,
+         pack_size: pack_size,
+         category: category
+       }
+     end
+   )
+

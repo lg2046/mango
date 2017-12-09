@@ -13,7 +13,6 @@ defmodule Mango.Catalog.Product do
     field :image, :string
     field :pack_size, :string
     field :category, :string
-    field :op_date, :utc_datetime
 
     timestamps(type: :utc_datetime)
   end

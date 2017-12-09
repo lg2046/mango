@@ -10,7 +10,6 @@ defmodule Mango.Repo.Migrations.CreateProduct do
       add :image, :string
       add :pack_size, :string
       add :category, :string
-      add :op_date, :timestamptz
 
       timestamps(type: :timestamptz) # 增加inserted_at 与 updated_at
     end
