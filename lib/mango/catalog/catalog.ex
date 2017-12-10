@@ -8,12 +8,12 @@ defmodule Mango.Catalog do
   end
 
   def list_seasonal_products do
-    list_products
+    list_products()
     |> Enum.filter(&(&1.is_seasonal == true))
   end
 
   def get_category_products(cate) do
-    list_products
+    list_products()
     |> Enum.filter(&(&1.category == cate))
   end
 end

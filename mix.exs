@@ -43,7 +43,9 @@ defmodule Mango.Mixfile do
       {:cowboy, "~> 1.0"},
       {:hound, "~> 1.0", only: :test},
       {:timex, "~> 3.1"},
-      {:nimble_csv, "~> 0.1.0"}
+      {:nimble_csv, "~> 0.1.0"},
+      {:comeonin, "~> 4.0"},
+      {:bcrypt_elixir, "~> 0.12.0"},
     ]
   end
 
