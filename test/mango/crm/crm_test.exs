@@ -1,4 +1,4 @@
-defmodule Mango.CRM.CRMTest do
+defmodule Mango.CRMTest do
   use Mango.DataCase
 
   alias Mango.CRM

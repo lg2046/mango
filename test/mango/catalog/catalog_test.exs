@@ -1,4 +1,4 @@
-defmodule Mango.Catalog.CatalogTest do
+defmodule Mango.CatalogTest do
   use Mango.DataCase # 使用DataCase 可以在测试阶段帮助我们进行数据库连接
 
   alias Mango.Catalog

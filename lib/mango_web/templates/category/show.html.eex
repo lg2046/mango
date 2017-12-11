@@ -2,6 +2,6 @@
 
 <div class="row">
     <%= for product <- @products do %>
-        <%= render MangoWeb.ProductView, "product_card.html", product: product %>
+        <%= render MangoWeb.ProductView, "product_card.html", product: product, conn: @conn %>
     <% end %>
 </div>

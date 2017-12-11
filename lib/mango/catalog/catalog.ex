@@ -16,4 +16,9 @@ defmodule Mango.Catalog do
     list_products()
     |> Enum.filter(&(&1.category == cate))
   end
+
+  def get_product!(id) do
+    Product
+    |> Repo.get!(id)
+  end
 end
