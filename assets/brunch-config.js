@@ -34,9 +34,11 @@ exports.config = {
 
     // Configure your plugins
     plugins: {
-        babel: {
-            // Do not use ES6 compiler in vendor code
-            ignore: [/vendor/]
+        coffeescript: {
+            bare: true
+        },
+        sass: {
+            mode: 'ruby' // set to 'native' to force libsass
         }
     },
 
